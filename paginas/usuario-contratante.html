@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/tela-de-usuario.css">
     <title>Usuário - profissional</title>
 </head>
 
@@ -13,7 +14,9 @@
 
         <!--CONTAINER EDITAR-->
         <section class="container-editar">
-            <div class="tipo-da-conta">Tipo da conta</div>
+            <div class="tipo-da-conta">
+                <p>Contratante</p>
+            </div>
             <section class="dados-usuario">
                 <div class="img-usuario">
                     <img src="../imagens/imagem-sem-user.png" alt="">
@@ -26,9 +29,9 @@
                     </section>
                 </div>
                 <section class="informacoes-usuario">
-                    <div class="nome-usuario"></div>
-                    <div class="email-usuario"></div>
-                    <div class="senha-usuario"></div>
+                    <div class="nome-usuario">nome do usuario</div>
+                    <div class="email-usuario">email@gmail.com</div>
+                    <div class="senha-usuario">senha: ********</div>
 
                     <button class="bnt-editar">Editar</button>
                 </section>
@@ -42,9 +45,10 @@
                 <h1>Contratados</h1>
                 <div class="valor-de-contratados">
                     <!--=ADICIONAR DO BANCO DE DADOS-->
+                    0
                 </div>
             </div>
-            <div class="valores">
+            <div id="mudar-conta" class="valores">
                 <a href="./cadastro-profissional.html"></a>
                 <h1>Mudar para conta Profissional</h1>
                 <img src="../imagens/patrocinio_maos-removebg-preview.png" alt="">
@@ -55,11 +59,16 @@
         <!--MAIS INFORMAÇÕES-->
         <section class="mais-informacoes">
             <div class="cidade">
-                adicionar cidade
-            </div>
+                <i class="ri-map-pin-2-fill"></i>
+                <p class="nome-da-cidade">
+                    R. Salto do Itararé - Guarulhos
+                    Jardim Jovaia
+                </p>
+            </div><br>
             <div class="contato">
-                adicionar numero
-            </div>
+                <i class="ri-whatsapp-fill"></i>
+                <p class="numero">+55 (11) 95118-2656</p>
+            </div><br>
             <div class="notificacoes">
                 <a href="./notificacoes.html">
                     <img src="../imagens/notificacao-removebg-preview.png" alt="">
@@ -67,7 +76,7 @@
                 </a>
             </div>
         </section>
-        
+
 
         <!--SAIR DA CONTA-->
         <section class="deslogar">
@@ -76,7 +85,7 @@
 
         <section class="barra-de-navegacao">
             <a href="./pagina-inicial-contratante.html" class="navegacao"><i class="ri-home-smile-fill"></i></a>
-            <a href="./usuario-contratante.html" class="navegacao"><i class="ri-user-3-fill"></i></a>
+            <a href="#" class="navegacao"><i class="ri-user-3-fill"></i></a>
             <a href="./parte-engrenagem.html" class="navegacao"><i class="ri-settings-3-fill"></i></a>
         </section>
 

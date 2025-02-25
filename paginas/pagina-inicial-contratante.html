@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/pagina-inicial.css">
     <title>Inicio - contratante</title>
 </head>
+
 <body>
     <section class="container">
         <section class="container-header">
             <section class="pesquisa">
-                <input type="search" name="pesquisa" id="pesquisa">
+                <input type="search" name="pesquisa" id="pesquisa" placeholder="Pesquise por serviços">
                 <label for="pesquisa"> <i class="ri-search-line"></i></label>
             </section>
-            <section class="usuario">
-                <i class="ri-user-3-fill"></i>
-            </section>
+
         </section>
 
         <section class="container-patrocinio">
             <h1 class="titulo-patrocinados">Patrocinados</h1>
             <section class="patrocinio">
-                <!--imagens patrocinadas-->
+                <!--imagens patrocinadas tamanho 308x172 -->
+                <img src="../imagens/patrocinio.jpe" alt="">
+                <img src="../imagens/patrocinio.jpeg" alt="">
+                <img src="../imagens/patrocinio.jpeg" alt="">
+                <img src="../imagens/patrocinio.jpeg" alt="">
+                <img src="../imagens/patrocinio.jpeg" alt="">
             </section>
         </section>
+
         
         <section class="container-categorias">
-            <div class="categoria">
-                <a href="./servicos-disponiveis.html">Alimentação</a>
-            </div>
-            <div class="categoria">
-                <a href="./servicos-disponiveis.html">Transporte</a>
-            </div>
-            <div class="categoria">
-                <a href="./servicos-disponiveis.html">Limpeza</a>
-            </div>
-            <div class="categoria">
-                <a href="./servicos-disponiveis.html">Beleza e Estética</a>
-            </div>
-            <div class="categoria">
-                <a href="./servicos-disponiveis.html">Manutenção e Reparos</a>
-            </div>
-            <div class="categoria">
-                <a href="./servicos-disponiveis.html">Consultoria</a>
-            </div>
+            <h1>Categorias</h1>
+            <section class="categorias">
+                <div class="categoria">
+                    <a href="./servicos-disponiveis.html">Alimentação</a>
+                </div>
+                <div class="categoria">
+                    <a href="./servicos-disponiveis.html">Transporte</a>
+                </div>
+                <div class="categoria">
+                    <a href="./servicos-disponiveis.html">Limpeza</a>
+                </div>
+                <div class="categoria">
+                    <a href="./servicos-disponiveis.html">Beleza e Estética</a>
+                </div>
+                <div class="categoria">
+                    <a href="./servicos-disponiveis.html">Manutenção e Reparos</a>
+                </div>
+                <div class="categoria">
+                    <a href="./servicos-disponiveis.html">Consultoria</a>
+                </div>
+                
+            </section>
         </section>
-        
+
         <section class="mais-avaliados">
             <h1 class="titulo-avaliados">Mais avaliados</h1>
             <section class="avaliados">
                 <div class="avaliado">
                     <div class="usuario">
-                        <img src="" alt="usuario">
+                        <img src="../imagens/imagem-sem-user.png" alt="usuario">
                         <div class="nome">Nome do usuario</div>
                     </div>
 
@@ -60,6 +71,8 @@
                         <div class="numero-de-avaliacao">4,5</div>
                     </div>
                 </div>
+                
+                
             </section>
         </section>
 
@@ -68,7 +81,25 @@
             <a href="./usuario-contratante.html" class="navegacao"><i class="ri-user-3-fill"></i></a>
             <a href="./parte-engrenagem.html" class="navegacao"><i class="ri-settings-3-fill"></i></a>
         </section>
-        
+
     </section>
+    <script>
+        const images = document.querySelectorAll('.patrocinio img');
+        let currentIndex = 0;
+
+        // Exibe a primeira imagem
+        images[currentIndex].classList.add('active');
+
+        // Função para mudar a imagem
+        function changeImage() {
+            images[currentIndex].classList.remove('active'); // Remove a imagem atual
+            currentIndex = (currentIndex + 1) % images.length; // Calcula o próximo índice
+            images[currentIndex].classList.add('active'); // Adiciona a nova imagem
+        }
+
+        // Muda a imagem a cada 3 segundos
+        setInterval(changeImage, 3000);
+    </script>
 </body>
+
 </html>
