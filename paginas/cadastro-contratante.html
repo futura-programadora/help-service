@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos/contratante.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Contratante</title>
+</head>
+
+<body>
+    <section class="container">
+        <h1>Cadastro contratante</h1>
+        <section class="form-contratante">
+            <!--icone-->
+            <label for="email"><i class="ri-user-3-fill"></i></label>
+            <input type="email" name="email" id="email">
+            <!--icone-->
+            <label for="senha"><i class="ri-lock-2-fill"></i></label>
+            <input type="password" name="senha" id="senha">
+
+            <label for="telefone"><i class="ri-phone-fill"></i></label>
+            <input type="tel" name="telefone" id="telefone">
+
+            <label for="regiao">Sua cidade</label>
+            <select name="regiao" id="regiao">
+                <option value="">Selecione uma cidade</option>
+
+                <!-- Norte -->
+                <option value="manaus">Norte - Manaus</option>
+                <option value="porto-velho">Norte - Porto Velho</option>
+                <option value="rio-branco">Norte - Rio Branco</option>
+                <option value="boa-vista">Norte - Boa Vista</option>
+                <option value="macapa">Norte - Macapá</option>
+                <option value="palmas">Norte - Palmas</option>
+                <option value="belem">Norte - Belém</option>
+
+                <!-- Nordeste -->
+                <option value="salvador">Nordeste - Salvador</option>
+                <option value="fortaleza">Nordeste - Fortaleza</option>
+                <option value="recife">Nordeste - Recife</option>
+                <option value="sao-luis">Nordeste - São Luís</option>
+                <option value="maceio">Nordeste - Maceió</option>
+                <option value="natal">Nordeste - Natal</option>
+                <option value="joao-pessoa">Nordeste - João Pessoa</option>
+                <option value="aracaju">Nordeste - Aracaju</option>
+
+                <!-- Centro-Oeste -->
+                <option value="brasilia">Centro-Oeste - Brasília</option>
+                <option value="cuiaba">Centro-Oeste - Cuiabá</option>
+                <option value="campo-grande">Centro-Oeste - Campo Grande</option>
+                <option value="goiania">Centro-Oeste - Goiânia</option>
+
+                <!-- Sudeste -->
+                <option value="sao-paulo">Sudeste - São Paulo</option>
+                <option value="rio-de-janeiro">Sudeste - Rio de Janeiro</option>
+                <option value="belo-horizonte">Sudeste - Belo Horizonte</option>
+                <option value="vitoria">Sudeste - Vitória</option>
+                <option value="niteroi">Sudeste - Niterói</option>
+                <option value="juiz-de-fora">Sudeste - Juiz de Fora</option>
+
+                <!-- Sul -->
+                <option value="curitiba">Sul - Curitiba</option>
+                <option value="porto-alegre">Sul - Porto Alegre</option>
+                <option value="florianopolis">Sul - Florianópolis</option>
+                <option value="joinville">Sul - Joinville</option>
+                <option value="cascavel">Sul - Cascavel</option>
+                <option value="londrina">Sul - Londrina</option>
+            </select>
+            
+            <label for="cidade">Se preferir escreva sua cidade aqui</label>
+            <input type="text" name="cidade" id="cidade">
+
+            <button type="submit">Cadastrar</button>
+        </section>
+        <div class="voltar">
+            <a href="./formas-de-cadastro.html" class="link-voltar">
+                <i class="ri-arrow-left-line"></i>
+
+            </a>
+
+        </div>
+    </section>
+</body>
+
+</html>
