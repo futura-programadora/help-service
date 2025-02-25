@@ -9,4 +9,9 @@
     --amarelo: yellow;
     --cinza-transparente: #a6a6a696;
     --cor-categorias: rgba(255, 255, 255, 0.719);
+
+    /*para degrades*/
+
+    --azul-escuro-degrade: #011939;
+    --azul-claro-degrade: #0147a6;
 }

@@ -9,4 +9,117 @@
     --amarelo: yellow;
     --cinza-transparente: #a6a6a696;
     --cor-categorias: rgba(255, 255, 255, 0.719);
+
+    /*para degrades*/
+
+    --azul-escuro-degrade: #011939;
+    --azul-claro-degrade: #0147a6;
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: var(--branco);
+}
+
+a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+html {
+    height: 100%;
+}
+
+body, .container {
+    background-color: var(--azul-escuro);
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+.azul_claro, .azul_claro1 {
+    background: linear-gradient(to right, var(--azul) 0%, var(--azul-claro) 50%, var(--azul) 100%);
+    height: 45px;
+}
+
+.azul_claro {
+    border-bottom-right-radius: 190%;
+    border-bottom-left-radius: 190%;
+}
+
+.azul_claro1 {
+    display: flex;
+    margin-bottom: 0;
+    border-top-right-radius: 190%;
+    border-top-left-radius: 190%;
+}
+
+
+.container_form img{
+    display: flex;
+    width: 150px;
+    border-radius: 50%;
+    padding: 25px;
+    margin: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color:#011939ae ;
+    border-radius: 19px;
+    width: 75%;
+    padding: 30px;
+    margin: 0px 20px;
+    margin: auto;
+}
+
+label > i {
+    font-size: 30px;
+}
+
+label {
+    margin: 10px 0px;
+}
+
+#email, #senha {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.lembrar-senha {
+    margin: 10px 0px;
+
+    & input {
+        width: 40px;
+    }
+}
+
+.bnt-logar {
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--azul);
+    border-radius: 10px;
+    border: none;
+}
+
+.opcoes {
+    margin: 5px 0px;
+
+}
+
+.primeiras_opcoes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.politica_termos {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 10px;
+}
+
+
