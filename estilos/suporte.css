@@ -71,6 +71,14 @@ body, .container {
     border-radius: 10px;
 }
 
+.container-suporte button {
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+
+}
+
 #Motivo-do-contato {
     min-height: 100px; /* Altura mínima para o textarea */
     max-height: 300px; /* Altura máxima para o textarea */
@@ -84,4 +92,11 @@ body, .container {
     font-style: italic; /* Por exemplo, itálico */
     padding: 10px;
 }
+
+.mensagens-enviadas {
+    text-align: center;
+    padding-inline: 10px;
+    margin: 10px;
+}
+
 
