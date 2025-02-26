@@ -38,7 +38,7 @@ body, .container {
     height: 100%; 
     margin: 0; /* Remove margens padrão do body */
     font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 60px;
+    padding-bottom: 50%;
 }
 
 img {
