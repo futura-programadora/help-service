@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="../estilos/configuracoes.css">
     <title>Configurações</title>
-
 </head>
 
 <body>
@@ -24,14 +23,19 @@
             <!--NOTIFICAÇÕES-->
             <div class="notificacoes">
                 <label for="notificacoes1">Notificações</label>
-                <input type="checkbox" name="notificacoes1" id="notificacoes1">
+                <input type="checkbox" id="notificacoes1" class="toggle-checkbox">
+                <label for="notificacoes1" class="toggle-label">
+                    <span class="toggle-circle"></span>
+                </label>
             </div>
-
 
             <!--MOSTRAR SENHA NA TELA DO USUARIO-->
             <div class="mostrar-senha">
                 <label for="mostrar-a-senha">Mostrar senha na tela do <br> usuário</label>
-                <input type="checkbox" name="mostrar-a-senha" id="mostrar-a-senha">
+                <input type="checkbox" id="mostrar-a-senha" class="toggle-checkbox">
+                <label for="mostrar-a-senha" class="toggle-label">
+                    <span class="toggle-circle"></span>
+                </label>
             </div>
 
             <!--IDIOMAS-->
@@ -65,9 +69,8 @@
             <!--TAMANHO DA FONTE-->
             <div class="tamanho-font">
                 <label for="number">Ajuste de fonte</label>
-                <input id="number" type="number" placeholder="14-20">
+                <input id="number" type="number" placeholder="14-20" min="14" max="20">
             </div>
-
 
             <!--VERSÃO DO APP-->
             <div class="versao-app">
@@ -81,8 +84,6 @@
             <div class="avaliacao-app">
                 <a href="./avaliacao-feedback-app.html">Avaliação e Feedback do app</a>
             </div>
-
-
 
         </section>
 

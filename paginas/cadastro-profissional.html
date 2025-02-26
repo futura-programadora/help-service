@@ -4,24 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/estilos/profissional.css">
+    <link rel="stylesheet" href="/estilos/cadastro.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Profissional</title>
 </head>
 
 <body>
     <section class="container">
+        <section class="img-cadastro">
+            <img src="../imagens/Designer (1).jpeg" alt="">
+            
+        </section>
+        <h1><span>Help</span>Service</h1><br>
         <h1>Cadastro Profissional</h1>
         <section class="form-contratante">
             <!--icone-->
             <label for="email"><i class="ri-user-3-fill"></i></label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" placeholder="Email: viontechofc@gmail.com">
             <!--icone-->
             <label for="senha"><i class="ri-lock-2-fill"></i></label>
-            <input type="password" name="senha" id="senha">
+            <input type="password" name="senha" id="senha" placeholder="Senha">
 
             <label for="telefone"><i class="ri-phone-fill"></i></label>
-            <input type="tel" name="telefone" id="telefone">
+            <input type="tel" name="telefone" id="telefone" placeholder="+55 (DDD) 95118-2656">
 
             <label for="regiao">Sua cidade</label>
             <select name="regiao" id="regiao">
@@ -68,9 +73,9 @@
                 <option value="cascavel">Sul - Cascavel</option>
                 <option value="londrina">Sul - Londrina</option>
             </select>
-
+            
             <label for="cidade">Se preferir escreva sua cidade aqui</label>
-            <input type="text" name="cidade" id="cidade">
+            <input type="text" name="cidade" id="cidade" placeholder="Nome da cidade e Região">
 
             <button type="submit">Cadastrar</button>
         </section>

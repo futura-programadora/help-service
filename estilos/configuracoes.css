@@ -1,5 +1,4 @@
-@charset "UTF-8" ;
-
+/* Definindo variáveis de cores para o projeto */
 :root {
     --azul-escuro: #002c67;
     --azul: #004aad;
@@ -10,8 +9,7 @@
     --cinza-transparente: #a6a6a696;
     --cor-categorias: rgba(255, 255, 255, 0.719);
 
-    /*para degrades*/
-
+    /* Para degradês */
     --azul-escuro-degrade: #011939;
     --azul-claro-degrade: #0147a6;
 }
@@ -28,7 +26,6 @@ a {
 
 html {
     height: 100%;
-    
 }
 
 body, .container {
@@ -43,11 +40,12 @@ body, .container {
 .header-configuracoes {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 20px;
     color: var(--branco);
 
     & i {
-        font-size:40px;
+        font-size: 40px;
         margin-right: 50px;
     }
 }
@@ -66,17 +64,9 @@ body, .container {
     margin-bottom: 10px;
     font-weight: 600;
     color: var(--branco);
-
-    & input, .notificacoes1 {
-        width: 40px;
-    }
-
 }
 
-.notificacoes label{
-    padding: 8px 0px;
-}
-
+/* Parte do select do idioma */
 .idioma {
     color: var(--branco);
     display: flex;
@@ -86,10 +76,29 @@ body, .container {
     margin-bottom: 10px;
 }
 
+/* Estilizando o select do idioma com bordas arredondadas e efeitos de foco */
+.idioma select {
+    padding: 8px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: var(--azul); /* Cor de fundo do select */
+    color: var(--branco); /* Cor do texto */
+    border: none; /* Remover borda padrão */
+    font-size: 14px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de mãozinha */
+    transition: background-color 0.3s ease; /* Transição suave para o foco */
+}
+
+/* Efeito de foco: quando o select estiver em foco, ele muda para uma cor mais escura */
+.idioma select:focus {
+    outline: none; /* Remove o contorno padrão do foco */
+    background-color: var(--azul-escuro); /* Muda a cor de fundo quando o select tem foco */
+}
+
 div {
     color: var(--branco);
 }
 
+/* Parte do input de ajuste de tamanho da fonte */
 .tamanho-font {
     display: flex;
     justify-content: space-between;
@@ -99,11 +108,24 @@ div {
     font-weight: 600;
     color: var(--branco);
     font-size: 16px;
+}
 
-    & input {
-        width: 80px;
-        padding: 5px;
-    }
+/* Estilizando o input de ajuste de tamanho de fonte com bordas arredondadas */
+.tamanho-font input {
+    width: 80px; /* Largura do input */
+    padding: 8px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 1px solid var(--branco); /* Borda branca */
+    background-color: var(--azul); /* Cor de fundo do input */
+    color: var(--branco); /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para o foco */
+}
+
+/* Efeito de foco: quando o input estiver em foco, ele muda para uma cor mais escura */
+.tamanho-font input:focus {
+    outline: none; /* Remove o contorno padrão do foco */
+    background-color: var(--azul-escuro); /* Muda a cor de fundo quando o input tem foco */
 }
 
 .versao-app {
@@ -117,4 +139,42 @@ div {
 
 .avaliacao-app {
     margin-top: 100px;
+}
+
+/* Estilos do toggle (botão de alternância) */
+.toggle-checkbox {
+    display: none; /* Esconde o checkbox padrão */
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 60px; /* Largura do botão */
+    height: 30px; /* Altura do botão */
+    background-color: #ccc; /* Cor de fundo padrão */
+    border-radius: 30px; /* Bordas arredondadas */
+    position: relative; /* Necessário para posicionar a bolinha */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+/* Bolinha do toggle */
+.toggle-circle {
+    width: 26px; /* Tamanho da bolinha */
+    height: 26px; /* Tamanho da bolinha */
+    background-color: white; /* Cor da bolinha */
+    border-radius: 50%; /* Para ficar redonda */
+    position: absolute;
+    top: 2px; /* Alinhamento vertical */
+    left: 2px; /* Alinhamento inicial */
+    transition: transform 0.3s ease; /* Transição suave para a movimentação */
+}
+
+/* Quando o toggle está ativado (checkbox marcado), o fundo muda e a bolinha se move */
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #4caf50; /* Cor do fundo quando marcado */
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-circle {
+    transform: translateX(30px); /* Move a bolinha para a direita quando ativado */
 }

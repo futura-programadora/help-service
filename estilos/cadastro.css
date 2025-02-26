@@ -16,6 +16,23 @@
     --azul-claro-degrade: #0147a6;
 }
 
+h1 {
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 5px;
+    width: 180px;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+
+span {
+    color: var(--azul-claro-degrade);
+}
+
 .img-cadastro {
     display: flex;
     justify-content: center;
@@ -25,50 +42,30 @@ img {
     width: 150px;
 }
 
-span {
-    color: var(--azul-claro-degrade);
-}
-
-h1 {
-    text-align: center;
-    margin: 0px;
-    margin-bottom: 40px;
-}
-
-.opcoes-cadastro {
+.form-contratante {
     display: flex;
     flex-direction: column;
     width: 85%;
-    margin: auto; 
+    margin: auto;
+    background-color: rgb(207, 207, 207);
     border-radius: 10px;
+    padding: 15px;
 
-    & a {
-        text-decoration: none;
-        font-size: 20px;
-        border: 1px solid gray;
-        padding: 20px;
-        margin: 10px;
-        text-align: center;
-        border-radius: 10px;
-        font-weight: 600;
+    & input {
+        padding: 5px;
+        margin: 10px 0px;
+        border-radius: 5px;
     }
+
 }
 
-.opcao-cadastro {
-    color: black;
-}
-
-.opcao-cadastro:hover {
-    background-color: var(--azul-claro);
-}
-
-.opcao-cadastro2 {
-    color: var(--branco);
-    background-color: var(--azul);
-}
-
-.opcao-cadastro2:hover {
-    background-color: var(--azul-escuro);
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: 600;
 }
 
 .voltar a {
@@ -94,3 +91,5 @@ h1 {
     padding: 10px;
     
 }
+
+
