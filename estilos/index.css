@@ -73,6 +73,10 @@ body, .container {
     padding: 30px;
     margin: 0px 20px;
     margin: auto;
+
+    & h1 {
+        text-align: center;
+    }
 }
 
 label > i {
@@ -106,6 +110,11 @@ label {
     border-radius: 10px;
     border: none;
     font-weight: 600;
+}
+
+.bnt-logar:hover {
+    background-color: #0065e9;
+    
 }
 
 .opcoes {

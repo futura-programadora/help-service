@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <section class="header-verificacao">
+            <a href="javascript:history.back();"><i class="ri-arrow-left-line"></i></a>
+            <h1>Ajuda e suporte</h1>
+        </section>
+
+        <section class="explicacao">
+            <p>A verificação afirma que sua conta é 100% segura para a contratação de seus serviços pelos clientes, através do acesso analisaremos seu perfil e avaliações gerais.</p>
+        </section>
+
+        <section class="form-verificacao">
+
+            <section class="metodo-verificacao">
+                <label for="metodo">Método de verificação *</label>
+                <select name="metodo" id="metodo">
+                    <option value="email">Email</option>
+                    <option value="SMS">SMS</option>
+                </select>
+            </section>
+
+            <section class="numero-ou-email">
+                <label for="n-ou-e">Número ou Email *</label>
+                <input type="text" name="n-ou-e" id="n-ou-e" placeholder="Número ou email">
+            </section>
+
+            <section class="profissao-container">
+                <label for="profissao">Profissão *</label>
+                <input type="text" name="profissao" id="profissao" placeholder="Escreva sua profissão">
+            </section>
+
+            <section class="cnpj-container">
+                <label for="cnpj">CNPJ (Opcional)</label>
+                <input type="text" name="cnpj" id="cnpj" placeholder="Adicionar o CNPJ">
+            </section>
+
+            <button class="analisar">Enviar para análise</button>
+        </section>
+    </section>
+</body>
+</html>
