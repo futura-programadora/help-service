@@ -64,12 +64,14 @@ body, .container {
     padding: 10px;
     border-radius: 10px;
     height: 40%;
+    
 }
 
 .container-suporte input {
     padding: 8px;
     margin: 10px 0px;
     border-radius: 10px;
+    color: black;
 }
 
 .container-suporte button {
@@ -92,19 +94,21 @@ body, .container {
     resize: vertical;
     margin: 10px 0px;
     border-radius: 10px;
+    color: black;
+    padding: 10px;
 }
 
 #Motivo-do-contato::placeholder {
     color: gray; /* Altere a cor como preferir */
     font-style: italic; /* Por exemplo, itálico */
-    padding: 10px;
+    
 }
 
 .mensagens-enviadas {
     text-align: center;
     padding-inline: 10px;
     margin: 10px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .enviados {
