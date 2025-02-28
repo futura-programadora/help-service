@@ -38,7 +38,7 @@ body, .container {
     height: 100%; 
     margin: 0; /* Remove margens padrão do body */
     font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 50%;
+    
 }
 
 img {
@@ -138,11 +138,12 @@ img {
     }
 }
 
-.valor-de-contratados {
+/*COMPARTILHADO COM PAGINA USUARIO PROFISSIONAL*/
+.valor-de-contratados, .valor-de-trabalhos, .trabalhos-finalizados {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    font-size: 50px;
+    font-size: 40px;
 
 }
 
@@ -230,4 +231,36 @@ img {
 .barra-de-navegacao a[href="#"] {
     background-color: rgba(200, 200, 200, 0.5); /* Fundo cinza quando o href é # */
     border-radius: 10px;
+}
+
+/*ESPECIFICO DE TELA USUSARIO PROFISSIONAL*/
+
+.trabalhos-patrocinados {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-patrocinados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seus-patrocinios {
+    border: 1px solid var(--branco);
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100px;
+    overflow: auto;
+}
+
+.servico-patrocinado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cinza-transparente);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
 }

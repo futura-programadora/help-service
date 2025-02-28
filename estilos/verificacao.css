@@ -1,0 +1,150 @@
+@charset "UTF-8" ;
+
+:root {
+    --azul-escuro: #002c67;
+    --azul: #004aad;
+    --azul-claro: #5de0e6;
+    --branco: white;
+    --preto: rgb(51, 51, 51);
+    --amarelo: yellow;
+    --cinza-transparente: #a6a6a696;
+    --cor-categorias: rgba(255, 255, 255, 0.719);
+
+    /*para degrades*/
+
+    --azul-escuro-degrade: #011939;
+    --azul-claro-degrade: #0147a6;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+html {
+    height: 100%;
+    
+}
+
+body, .container {
+    background: linear-gradient(to bottom, var(--azul-claro-degrade), var(--azul-escuro-degrade));
+    background-attachment: fixed; /* Mantém o fundo fixo */
+    height: 100%; 
+    margin: 0; /* Remove margens padrão do body */
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 60px;
+    color: var(--branco);
+}    
+
+
+.header-verificacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+   
+
+    & i {
+        font-size:40px;
+        margin-right: 50px;
+    }
+}
+
+.explicacao p{
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-verificacao {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.metodo-verificacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    font-weight: 600;
+
+    & select {
+        padding: 5px;
+        border-radius: 10px;
+    }
+}
+
+.numero-ou-email {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+        padding: 10px 5px;
+        font-weight: 600;
+    }
+
+    & input {
+        padding: 10px;
+        margin: 0px 5px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: none;
+    }
+}
+
+.profissao-container {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+        padding: 10px 5px;
+        font-weight: 600;
+    }
+
+    & input {
+        padding: 10px;
+        margin: 0px 5px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: none;
+    }
+}
+
+.cnpj-container {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+        padding: 10px 5px;
+        font-weight: 600;
+    }
+
+    & input {
+        padding: 10px;
+        margin: 0px 5px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: none;
+    }
+}
+
+.analisar {
+    padding: 10px;
+    margin: 0px 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: var(--branco);
+    font-weight: 600;
+}
+
+.analisar:hover {
+    background-color: rgb(28, 28, 28);
+}

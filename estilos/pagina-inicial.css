@@ -127,7 +127,7 @@ body, .container {
     padding: 5px 7px;
     border-radius: 8px;
     background-color: var(--cinza-transparente);
-    width: 75px;
+    width: 25%;
     height: 50px;
 }
 
@@ -213,3 +213,69 @@ body, .container {
     background-color: rgba(200, 200, 200, 0.5); /* Fundo cinza quando o href é # */
     border-radius: 10px;
 }
+
+
+/*PROFISSIONAL*/
+
+.img-marca img{
+    width: 30px;
+}
+
+.cadastrar-servicos a > img {
+    width: 30px;
+}
+
+.titulo-trabalhos {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.categoria-personalizada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid var(--branco);
+    border-radius: 10px;
+    margin: 0px 10px;
+}
+
+.cadastrar-servicos {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 15px;
+
+    & a {
+        text-align: center;
+    }
+
+}
+
+.servico-normal {
+    background-color: black;
+    padding: 15px;
+    border: 1px solid var(--branco);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.servico-normal:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+.servico-patrocinado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid var(--branco);
+    border-radius: 10px;
+    margin-top: 20px;
+
+    & img {
+        margin-right: 5px;
+    }
+
+}
+
