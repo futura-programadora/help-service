@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Serviço Patrocinado</title>
+</head>
+<body>
+    <section class="container">
+        <section class="header-cadastrar-servico">
+            <a href="javascript:history.back();"><i class="ri-arrow-left-line"></i></a>
+            <h1>Cadastrar serviço</h1>
+        </section>
+
+        <p>O serviço patrocinado fica em destaque na tela principal dos contratatantes, o patrocinio é negociado e pago direto com o dono do app, pelo número (11) 95118-2656, para definição da imagem do patrocinio e pagameno. Cadastre o serviço primeiro.</p>
+
+        <section class="informacoes-servico">
+            <label for="nome">Nome do Serviço</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome curto">
+
+            <label for="descricao">Descrição do serviço</label>
+            <textarea name="descricao" id="descricao"></textarea>
+
+            <label for="categorias">Categoria</label>
+            <select name="categorias" id="categorias">
+                <option value="">selecione uma categoria</option>
+            </select><br>
+
+            <section class="valor">
+                <label for="valor">Valor</label>
+                <input type="text" name="valor" id="valor">
+                <select name="tipo-pagamento" id="tipo-pagamento">
+                    <option value="unico">Único</option>
+                    <option value="a-combinar">A combinar</option>
+                    <option value="mensal">Mensal</option>
+                </select>
+            </section>
+
+            <button class="cadastrar-servico">Cadastrar serviço</button>
+        </section>
+    </section>
+</body>
+</html>
