@@ -54,7 +54,7 @@ img {
     border-radius: 50%;
 }
 
-.form-contratante {
+.form-contratante, .form-profissional {
     display: flex;
     flex-direction: column;
     width: 85%;

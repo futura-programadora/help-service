@@ -1,12 +1,12 @@
 console.log('Carregando DOM');
 
-function cadastroContratante() {
+function cadastroProfissional() {
     console.log('function funcionando');
 
     const email = document.querySelector('#email').value;
     const senha = document.querySelector('#senha').value;
     const telefone = document.querySelector('#telefone').value;
-
+    
     // Pegar a cidade de acordo com a lógica que você descreveu
     const cidade = document.querySelector('#cidade').value || document.querySelector('#regiao').value;
 
@@ -28,7 +28,7 @@ function cadastroContratante() {
         return;
     }
 
-    const dadosContratante = {
+    const dadosProfissional = {
         email: email,
         senha: senha,
         telefone: telefone,
@@ -36,21 +36,21 @@ function cadastroContratante() {
     };
 
     // Enviar os dados para a API utilizando o fetch
-    fetch('http://localhost:3001/contratante', {
+    fetch('http://localhost:3001/profissional', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(dadosContratante)
+        body: JSON.stringify(dadosProfissional)
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Erro ao tentar criar conta como contratante');
+            throw new Error('Erro ao tentar criar conta profissional');
         }
         return response.json();
     })
     .then(data => {
-        console.log('Contratante cadastrado com sucesso:', data);
+        console.log('Profissional cadastrado com sucesso:', data);
         alert('Cadastro realizado com sucesso!');
         // Você pode redirecionar ou limpar os campos aqui, se necessário
     })
