@@ -11,9 +11,6 @@ function preencherCampos() {
         document.querySelector('#senha').value = senha;
         document.querySelector('#me-lembre').checked = true;  // Marca o checkbox "Me lembre"
     }
-
-    // Mostrar dados armazenados no localStorage no console quando a página é recarregada
-    mostrarLocalStorage();
 }
 
 // Função para armazenar dados no localStorage se "Me lembre" estiver ativado
@@ -22,38 +19,34 @@ function armazenarDados() {
     const senha = document.querySelector('#senha').value;
     const meLembrei = document.querySelector('#me-lembre').checked;
 
-    // Cria um objeto contendo todos os dados que você quer armazenar
-    const contratante = {
+    const profissional = {
         email: email,
         senha: senha,
         meLembrei: meLembrei, // Armazena a informação sobre o checkbox
     };
 
     // Sempre armazena os dados no localStorage
-    localStorage.setItem('contratante', JSON.stringify(contratante));
+    localStorage.setItem('profissional', JSON.stringify(profissional));
 
-    // Se quiser salvar a informação de "Me lembre" também (caso desejado)
     if (meLembrei) {
+        localStorage.setItem('email', email);
+        localStorage.setItem('senha', senha);
         localStorage.setItem('meLembrei', 'true');
     } else {
+        localStorage.removeItem('email');
+        localStorage.removeItem('senha');
         localStorage.removeItem('meLembrei');
     }
 }
 
-// Função para mostrar todos os dados armazenados no localStorage
-function mostrarLocalStorage() {
-    console.log(localStorage);
-}
-
-
 // Função de login
-async function logar() {
+async function logarProfissional() {
     console.log('Avaliando dados.')
     
     const email = document.querySelector('#email').value; // Pega o valor do input
     const senha = document.querySelector('#senha').value; // Pega o valor do input
 
-    const response = await fetch("http://localhost:3001/contratante/login", {
+    const response = await fetch("http://localhost:3001/profissional/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -69,9 +62,7 @@ async function logar() {
     if (response.ok) {
         // Armazenar os dados se "Me lembre" estiver ativado
         armazenarDados();
-        // Exibe os dados armazenados no localStorage no console
-        mostrarLocalStorage();
-        window.location.href = "../paginas/pagina-inicial-contratante.html";  // Redireciona para a página específica
+        window.location.href = "../paginas/pagina-inicial-profissional.html";  // Redireciona para a página específica
     } else {
         alert(data.message);  // Exibe a mensagem de erro
     }

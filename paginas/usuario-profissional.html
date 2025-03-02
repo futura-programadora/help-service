@@ -14,7 +14,9 @@
 
         <!--CONTAINER EDITAR-->
         <section class="container-editar">
-            <div class="tipo-da-conta"><p>Profissional</p></div>
+            <div class="tipo-da-conta">
+                <p>Profissional</p>
+            </div>
             <section class="dados-usuario">
                 <div class="img-usuario">
                     <img src="../imagens/imagem-sem-user.png" alt="">
@@ -26,16 +28,32 @@
                     </section>
                 </div>
                 <section class="informacoes-usuario">
-                    <div class="nome-usuario">nome do usuario</div>
-                    <div class="email-usuario">email@gmail.com</div>
-                    <div class="senha-usuario">senha: ********</div>
+                    <div class="email-usuario" id="email-usuario">email@gmail.com</div>
+                    <div class="senha-usuario" id="senha-usuario">senha: ********</div>
 
-                    <button class="bnt-editar">Editar</button>
+                    <button onclick="abrirTelaEdicao()" class="bnt-editar">Editar</button>
                 </section>
+
+
 
             </section>
         </section>
 
+        <!-- Tela de Edição -->
+        <div class="tela-edicao" id="tela-edicao">
+            <div class="form-edicao">
+                <h3>Editar Informações</h3>
+                <label for="email-input">Email:</label>
+                <input type="email" id="email-input" />
+
+                <label for="senha-input">Senha:</label>
+                <input type="password" id="senha-input" />
+
+                <button onclick="salvarMudancas()">Salvar</button>
+                <button onclick="fecharTelaEdicao()">Cancelar</button>
+            </div>
+        </div>
+        
         <!--OUTROS VALORES-->
         <section class="valores-servicos">
             <div class="valores">
@@ -115,6 +133,7 @@
         </section>
 
     </section>
+    <script src="../js/usuario-profissional.js"></script>
 </body>
 
 </html>
