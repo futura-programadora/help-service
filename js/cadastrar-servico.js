@@ -13,6 +13,8 @@ function cadastrarSevico() {
     const preco = document.querySelector('#valor').value || 'Valor não definido' ;
     const pagamento = document.querySelector('#tipo-pagamento').value;
     const identificacao = profissional.id;
+    const email = profissional.email
+    const numero = profissional.telefone
 
     if (!servico) {
         alert('campo Nome do Serviço é obrigatório')
@@ -31,7 +33,15 @@ function cadastrarSevico() {
         return
     }
     if (!identificacao) {
+        alert('Não encontramos o id da sua conta')
+        return
+    }
+    if (!email) {
         alert('Não encontramos o email da sua conta')
+        return
+    }
+    if (!numero) {
+        alert('Não encontramos o numero da sua conta')
         return
     }
 
@@ -41,7 +51,9 @@ function cadastrarSevico() {
         categoria: categoria,
         preco: preco,
         pagamento: pagamento,
-        identificacao: identificacao
+        identificacao: identificacao,
+        email: email,
+        numero: numero
     }
 
     fetch('http://localhost:3001/servico', {
