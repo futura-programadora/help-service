@@ -40,63 +40,63 @@ body, .container {
     color: var(--branco);
 }  
 
-.container p {
-    text-align: justify;
-    margin: 15px;
-}
-
-.centro {
-    height: 70vh;
+.pesquisa {
     display: flex;
     align-items: center;
-}
+    background-color: var(--branco);
+    width: 80%;
+    padding: 0px 4px;
+    border-radius: 10px;
 
-.header-criar-categoria {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
-   
 
     & i {
-        font-size:40px;
-        margin-right: 50px;
-    }
-}
-
-.criar-categoria {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 90%;
-    font-weight: 600;
-
-    & label {
-        padding: 10px 0px;
+        color: var(--preto);
+        margin-left: 5px;
     }
 
     & input {
-        padding: 5px 10px;
-        border-radius: 5px;
+        width: 80%;
         border: none;
-        margin-bottom: 15px;
+        outline-color: var(--cinza-transparente);
+        color: black;
+        padding: 8px 0px;
+        margin: 5px;
     }
-    & #descricao {
-        max-height: 300px;
-        min-height: 100px;
-        padding: 5px;
-        position: relative;
-        text-align: left;  /* Garantir que o texto e o placeholder fiquem alinhados à esquerda */
-    }
-}    
+}
 
-
-.criar {
-    background-color: black;
-    color: var(--branco);
-    border: none;
-    margin-top: 20px;
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    font-weight: 600;
+    margin-top: 15px;
+
+    & a > i {
+        font-size: 30px;
+    }
+}
+
+.container h1{
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.servicos-disponiveis {
+    margin: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.322);
+    padding: 10px;
     border-radius: 10px;
+    height: 75vh;
+    overflow: auto;
+}
+
+.servico {
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.descricao, .valor, .contatos {
+    margin-bottom: 10px;
 }

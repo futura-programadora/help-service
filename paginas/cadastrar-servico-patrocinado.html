@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/cadastrar-servico.css">
     <title>Serviço Patrocinado</title>
 </head>
 <body>
@@ -25,6 +26,7 @@
             <label for="categorias">Categoria</label>
             <select name="categorias" id="categorias">
                 <option value="">selecione uma categoria</option>
+                <option value="todos">Todos</option>
             </select><br>
 
             <section class="valor">
@@ -37,8 +39,9 @@
                 </select>
             </section>
 
-            <button class="cadastrar-servico">Cadastrar serviço</button>
+            <button onclick="cadastrarSevico()" class="cadastrar-servico">Cadastrar serviço</button>
         </section>
     </section>
+    <script src="../js/cadastrar-servico.js"></script>
 </body>
 </html>

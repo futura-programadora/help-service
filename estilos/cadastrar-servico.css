@@ -16,11 +16,6 @@
     --azul-claro-degrade: #0147a6;
 }
 
-html {
-    height: 100%;
-    
-}
-
 * {
     margin: 0px;
     padding: 0px;
@@ -31,27 +26,22 @@ a {
     color: var(--branco);
 }
 
+html {
+    height: 100%;
+    
+}
+
 body, .container {
     background: linear-gradient(to bottom, var(--azul-claro-degrade), var(--azul-escuro-degrade));
     background-attachment: fixed; /* Mantém o fundo fixo */
     height: 100%; 
     margin: 0; /* Remove margens padrão do body */
     font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 60px;
     color: var(--branco);
 }  
 
-.container p {
-    text-align: justify;
-    margin: 15px;
-}
-
-.centro {
-    height: 70vh;
-    display: flex;
-    align-items: center;
-}
-
-.header-criar-categoria {
+.header-cadastrar-servico {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,39 +54,51 @@ body, .container {
     }
 }
 
-.criar-categoria {
+.informacoes-servico {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    width: 90%;
-    font-weight: 600;
+    margin: 10px;
 
-    & label {
-        padding: 10px 0px;
+    & input, label {
+        margin-bottom: 10px;
     }
 
     & input {
-        padding: 5px 10px;
-        border-radius: 5px;
-        border: none;
-        margin-bottom: 15px;
-    }
-    & #descricao {
-        max-height: 300px;
-        min-height: 100px;
         padding: 5px;
-        position: relative;
-        text-align: left;  /* Garantir que o texto e o placeholder fiquem alinhados à esquerda */
+        border-radius: 8px;
     }
-}    
 
+    & label {
+        font-weight: 600;
+        margin-top: 15px;
+    }
 
-.criar {
-    background-color: black;
-    color: var(--branco);
-    border: none;
-    margin-top: 20px;
-    padding: 10px;
-    font-weight: 600;
-    border-radius: 10px;
+    & textarea {
+        padding: 5px;
+    }
+
+    & select {
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    & button {
+        color: var(--branco);
+        background-color: black;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: 600;
+    }
+
+    & button:hover {
+        background-color: rgb(66, 66, 66);
+        
+    }
+}
+
+.container p {
+    text-align: justify;
+    
+    margin: 15px;
 }

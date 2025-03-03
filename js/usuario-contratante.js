@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Atualiza a senha (mascarada por segurança)
         document.getElementById('senha-usuario').textContent = `senha: ********`;
+
+        document.querySelector('.nome-da-cidade').textContent = contratante.cidade
+
+        document.querySelector('.numero').textContent = contratante.telefone
     } else {
         console.log('Nenhum dado de contratante encontrado no localStorage.');
     }

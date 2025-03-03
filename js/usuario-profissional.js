@@ -11,7 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('email-usuario').textContent = profissional.email;
 
         // Atualiza a senha (mascarada por segurança)
-        document.getElementById('senha-usuario').textContent = `senha: ${profissional.senha}`;
+        document.getElementById('senha-usuario').textContent = `senha: *********`;
+
+        document.querySelector('.nome-da-cidade').textContent = profissional.cidade
+
+        document.querySelector('.numero').textContent = profissional.telefone
+        
     } else {
         console.log('Nenhum dado de profissional encontrado no localStorage.');
     }
