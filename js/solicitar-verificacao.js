@@ -1,36 +1,37 @@
 console.log('iniciando js')
 
+function verificar() {
+    console.log('js funcionando')
 
-function ajuda() {
+    const contato = document.querySelector('#n-ou-e').value;
+    const profissao = document.querySelector('#profissao').value;
+    const cnpj = document.querySelector('#cnpj').value || 'Sem CNPJ';
 
-    const email = document.querySelector('#email').value;
-    const detalhes = document.querySelector('#Motivo-do-contato').value;
-    
-    if (!email) {
-        alert('Campo email é obrigatório')
+    if (!contato) {
+        alert('campo contato é Obrigatório');
         return
     }
-    if (!detalhes) {
-        alert('Campo de detalhes é obrigatório')
+    if (!profissao) {
+        alert('Campo profissao é obrigatório');
         return
-
     }
 
-    const dadosAjuda = {
-        email: email,
-        detalhes: detalhes
+    const dadosVerificacao = {
+        contato: contato,
+        profissao: profissao,
+        cnpj: cnpj,
     }
 
-    fetch('http://localhost:3001/ajuda', {
+    fetch('http://localhost:3001/verificacao', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(dadosAjuda)
+        body: JSON.stringify(dadosVerificacao)
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Erro ao tentar entrar em contato');
+            throw new Error('Erro ao tentar verificar conta');
         }
         return response.json();
     })

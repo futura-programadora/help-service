@@ -10,7 +10,7 @@ function cadastrarSevico() {
     const servico = document.querySelector('#nome').value;
     const descricao = document.querySelector('#descricao').value;
     const categoria = document.querySelector('#categorias').value;
-    const preco = document.querySelector('#valor').value || 0 ;
+    const preco = document.querySelector('#valor').value || 'Valor não definido' ;
     const pagamento = document.querySelector('#tipo-pagamento').value;
     const identificacao = profissional.id;
 
