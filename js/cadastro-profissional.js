@@ -36,7 +36,7 @@ function cadastroProfissional() {
     };
 
     // Enviar os dados para a API utilizando o fetch
-    fetch('http://localhost:3001/profissional', {
+    fetch('https://back-end-help-service.onrender.com/profissional', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -58,6 +58,19 @@ img {
     align-items: center;
 }
 
+.dados-usuario div {
+    /* Garante que os itens dentro de dados-usuario não quebrem linhas e são cortados */
+    white-space: nowrap;       /* Impede quebra de linha */
+    overflow: hidden;          /* Oculta o texto que ultrapassa o limite */
+    text-overflow: ellipsis;   /* Adiciona "..." no final do texto que excede */
+}
+
+.email-usuario, .senha-usuario {
+    /* Se você quiser aplicar estilos específicos aos elementos de email e senha */
+    max-width: 200px;          /* Ajuste conforme o seu layout */
+}
+
+
 .img-usuario img {
     width: 90px;
     border-radius: 50%;

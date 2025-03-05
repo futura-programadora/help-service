@@ -18,12 +18,12 @@
                 <input type="search" name="pesquisa" id="pesquisa" placeholder="Pesquise por serviços">
                 <label for="pesquisa"> <i class="ri-search-line"></i></label>
             </section>
-
         </section>
 
         <h1>Serviços disponíveis</h1>
 
         <section class="servicos-disponiveis">
+            <!-- Exemplo de Serviço -->
             <div class="servico">
                 <h1 class="nome-do-servico">Nome do serviço</h1>
 
@@ -44,31 +44,26 @@
                         <p class="nome-categoria">Categoria: </p>
                     </div>
                 </details>
+
+                <!-- Seção de Avaliação -->
+                <div class="avaliacao">
+                    <p>Avaliação: </p>
+                    <div class="estrelas">
+                        <span class="estrela" data-valor="1">★</span>
+                        <span class="estrela" data-valor="2">★</span>
+                        <span class="estrela" data-valor="3">★</span>
+                        <span class="estrela" data-valor="4">★</span>
+                        <span class="estrela" data-valor="5">★</span>
+                    </div>
+                    <button class="avaliar" data-servico="Nome do serviço">Avaliar</button>
+                </div>
             </div>
-            
-            <div class="servico">
-                <h1 class="nome-do-servico">Nome do serviço</h1>
 
-                <details class="detalhes-servico">
-                    <summary>Detalhes do serviço</summary><br>
-                    <div class="descricao">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam soluta, hic rerum blanditiis eum voluptas ea voluptate amet accusantium obcaecati nam possimus expedita ab labore minus beatae similique harum laboriosam!
-                    </div>
-                    <div class="valor">
-                        <p class="preco">R$ 49,90</p>
-                        <p class="Tipo de pagamento">Tipo de pagamento: Único</p>
-                    </div>
-                    <div class="contatos">
-                        <p class="numero"> Número: +55 (11) 95118--2656</p>
-                        <p class="email">Email: viontech@gmail.com</p>
-                    </div>
-                    <div class="categoria">
-                        <p class="nome-categoria">Categoria: </p>
-                    </div>
-                </details>
+           
             </div>
         </section>
     </section>
+
     <script src="../js/servicos-disponiveis.js"></script>
 </body>
 

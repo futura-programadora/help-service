@@ -22,7 +22,7 @@ function verificar() {
         cnpj: cnpj,
     }
 
-    fetch('http://localhost:3001/verificacao', {
+    fetch('https://back-end-help-service.onrender.com/verificacao', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

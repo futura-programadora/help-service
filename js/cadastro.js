@@ -36,7 +36,7 @@ function cadastroContratante() {
     };
 
     // Enviar os dados para a API utilizando o fetch
-    fetch('http://localhost:3001/contratante', {
+    fetch('https://back-end-help-service.onrender.com/contratante', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -46,7 +46,7 @@ async function logarProfissional() {
     const email = document.querySelector('#email').value; // Pega o valor do input
     const senha = document.querySelector('#senha').value; // Pega o valor do input
 
-    const response = await fetch("http://localhost:3001/profissional/login", {
+    const response = await fetch("https://back-end-help-service.onrender.com/profissional/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

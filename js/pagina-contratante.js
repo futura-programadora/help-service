@@ -3,6 +3,64 @@ const contratante = JSON.parse(localStorage.getItem('contratante'));
 console.log(contratante);  // Isso vai mostrar todos os dados salvos do contratante
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Carrega as avaliações
+  fetch('https://back-end-help-service.onrender.com/get-avaliacoes')
+      .then(response => response.json())
+      .then(avaliacoes => {
+          // Filtra as avaliações com nota maior ou igual a 3
+          const avaliacoesFiltradas = avaliacoes.filter(avaliacao => parseInt(avaliacao.avaliacao) >= 3);
+
+          // Cria um objeto para armazenar a maior avaliação de cada serviço
+          const servicosMaiorAvaliacao = {};
+
+          // Itera sobre as avaliações filtradas
+          avaliacoesFiltradas.forEach(avaliacao => {
+              // Verifica se o serviço já existe no objeto
+              if (servicosMaiorAvaliacao[avaliacao.servico]) {
+                  // Se a avaliação atual for maior, substitui
+                  if (parseInt(avaliacao.avaliacao) > parseInt(servicosMaiorAvaliacao[avaliacao.servico].avaliacao)) {
+                      servicosMaiorAvaliacao[avaliacao.servico] = avaliacao;
+                  }
+              } else {
+                  // Se o serviço não existir no objeto, adiciona
+                  servicosMaiorAvaliacao[avaliacao.servico] = avaliacao;
+              }
+          });
+
+          // Converte o objeto para um array de serviços
+          const servicosUnicos = Object.values(servicosMaiorAvaliacao);
+
+          // Aqui você vai renderizar os serviços mais avaliados
+          const containerAvaliacoes = document.querySelector('.avaliados'); // Alvo onde você quer exibir as avaliações
+
+          // Limpa qualquer conteúdo anterior
+          containerAvaliacoes.innerHTML = '';
+
+          // Renderiza as avaliações filtradas e sem repetição de serviços
+          servicosUnicos.forEach(servico => {
+              const divServico = document.createElement('div');
+              divServico.classList.add('avaliado');
+              divServico.innerHTML = `
+                  <div class="usuario">
+                      <img src="../imagens/imagem-sem-user.png" alt="usuario">
+                      <div class="nome">${servico.servico}</div> <!-- Nome do serviço -->
+                  </div>
+
+                  <div class="avaliacao">
+                      <i class="ri-star-fill"></i>
+                      <div class="numero-de-avaliacao">${servico.avaliacao}</div> <!-- Nota da avaliação -->
+                  </div>
+              `;
+              containerAvaliacoes.appendChild(divServico);
+          });
+      })
+      .catch(error => {
+          console.error('Erro ao buscar avaliações:', error);
+      });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
   const pesquisaInput = document.getElementById('pesquisa');
 
   // Adiciona um listener para o clique no campo de pesquisa
@@ -26,27 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Muda a imagem a cada 3 segundos
   setInterval(changeImage, 3000);
 
-  // Carrega as categorias e as imagens patrocinadas (simulação de uma API ou dados)
-  fetch('http://localhost:3001/get-categorias')  // Endpoint fictício, simule com a sua API real
-      .then(response => response.json())
-      .then(data => {
-          // Aqui você pode renderizar as categorias dinamicamente, se necessário
-      })
-      .catch(error => console.error('Erro ao carregar categorias:', error));
-
-  fetch('http://localhost:3001/get-patrocinados')  // Endpoint fictício, simule com a sua API real
-      .then(response => response.json())
-      .then(data => {
-          // Insere as imagens patrocinadas
-          patrocinioImages.forEach((image, index) => {
-              if (data[index]) {
-                  image.src = data[index].imagemUrl;
-                  image.alt = data[index].descricao;
-              }
-          });
-      })
-      .catch(error => console.error('Erro ao carregar imagens patrocinadas:', error));
-
   // Lógica para filtrar categorias no input de pesquisa
   pesquisaInput.addEventListener('input', () => {
       const termoPesquisa = pesquisaInput.value.toLowerCase();
@@ -66,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function buscarDadosDoContratante() {
   // Realiza o fetch para obter todos os contratantes
-  fetch('http://localhost:3001/get-contratantes')
+  fetch('https://back-end-help-service.onrender.com/get-contratantes')
     .then(response => response.json())  // Converte a resposta para JSON
     .then(contratantes => {
       console.log('Todos os contratantes:', contratantes);  // Exibe todos os contratantes no console

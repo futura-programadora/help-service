@@ -100,3 +100,7 @@ body, .container {
 .descricao, .valor, .contatos {
     margin-bottom: 10px;
 }
+
+.selecionada {
+    color: yellow;
+}

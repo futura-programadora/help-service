@@ -64,7 +64,7 @@ function salvarMudancas() {
         document.getElementById('senha-usuario').textContent = `senha: ********`; // Senha mascarada
 
         // Envia os dados para a API para atualizar o banco de dados
-        fetch('http://localhost:3001/atualizar-contratante/' + contratante.id, {
+        fetch('https://back-end-help-service.onrender.com/atualizar-contratante/' + contratante.id, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

@@ -4,8 +4,31 @@ const profissional = JSON.parse(localStorage.getItem('profissional'));
 
 console.log(profissional);  // Isso vai mostrar todos os dados salvos do contratante
 
+//ACONTECE APÓS O CARREGAMENTO DA PAGINA
+document.addEventListener('DOMContentLoaded', () => {
+    const categoriasSelect = document.getElementById('categorias');
+
+    // Função para buscar as categorias e preencher o select
+    fetch('https://back-end-help-service.onrender.com/get-categorias')
+        .then(response => response.json())
+        .then(categorias => {
+            // Preenche o select com as categorias
+            categorias.forEach(categoria => {
+                const option = document.createElement('option');
+                option.value = categoria.id;  // Usando o id como valor da opção
+                option.textContent = categoria.nome;  // Nome da categoria
+                categoriasSelect.appendChild(option);  // Adiciona a opção ao select
+            });
+        })
+        .catch(error => {
+            console.error('Erro ao carregar categorias:', error);
+        });
+});
+
+
 function cadastrarSevico() {
     console.log('js funcionando')
+
 
     const servico = document.querySelector('#nome').value;
     const descricao = document.querySelector('#descricao').value;
@@ -56,7 +79,7 @@ function cadastrarSevico() {
         numero: numero
     }
 
-    fetch('http://localhost:3001/servico', {
+    fetch('https://back-end-help-service.onrender.com/servico', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

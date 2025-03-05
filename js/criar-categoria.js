@@ -31,7 +31,7 @@ function criarCategoria() {
     }
 
     // Enviar os dados para a API utilizando o fetch
-    fetch('http://localhost:3001/categoria', {
+    fetch('https://back-end-help-service.onrender.com/categoria', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -47,6 +47,7 @@ function criarCategoria() {
     .then(data => {
         console.log('categoria cadastrada com sucesso:', data);
         alert('Cadastro realizado com sucesso!');
+        window.location.reload()
         // Você pode redirecionar ou limpar os campos aqui, se necessário
     })
     .catch(error => {

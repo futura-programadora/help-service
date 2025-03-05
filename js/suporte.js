@@ -21,7 +21,7 @@ function ajuda() {
         detalhes: detalhes
     }
 
-    fetch('http://localhost:3001/ajuda', {
+    fetch('https://back-end-help-service.onrender.com/ajuda', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
