@@ -21,7 +21,7 @@ document.getElementById('submit-btn').addEventListener('click', async function(e
 
     // Enviar os dados para a API
     try {
-        const response = await fetch('http://localhost:3001/user/edit-password', {
+        const response = await fetch('http://localhost:3001/user/edit-password-profissional', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

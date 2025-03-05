@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Serviços filtrados:', servicosFiltrados);  // Exibe no console os serviços filtrados
 
             console.log(servicosFiltrados.length)
+            
 
             document.querySelector('.valor-de-trabalhos').textContent = servicosFiltrados.length
 

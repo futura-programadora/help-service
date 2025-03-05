@@ -166,6 +166,16 @@ img {
 .mais-informacoes {
     padding: 10px;
     margin-bottom: 10px;
+
+    & a.seus-servicos {
+        border: 1px solid rgba(255, 255, 255, 0.496);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    & a.seus-servicos:hover{
+        background-color: #000a17;
+    }
 }
 
 .cidade {
