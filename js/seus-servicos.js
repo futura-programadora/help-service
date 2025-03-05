@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Função para excluir o serviço
 function excluirServico(idServico, divServico) {
-    fetch(`http://localhost:3001/delete-servico/${idServico}`, {
+    fetch(`https://back-end-help-service.onrender.com/delete-servico/${idServico}`, {
         method: 'DELETE',
     })
     .then(response => response.json())
