@@ -30,6 +30,9 @@ function criarCategoria() {
         
     }
 
+    // Exibir a tela de carregamento
+    showLoading();
+
     // Enviar os dados para a API utilizando o fetch
     fetch('https://back-end-help-service.onrender.com/categoria', {
         method: 'POST',
@@ -53,6 +56,20 @@ function criarCategoria() {
     .catch(error => {
         console.error('Erro:', error);
         alert('Houve um erro no cadastro. Tente novamente mais tarde.');
+    })
+    .finally(() => {
+        // Esconder a tela de carregamento após a resposta do servidor
+        hideLoading();
     });
 
+}
+
+// Função para mostrar a tela de carregamento
+function showLoading() {
+    document.getElementById('loading').style.display = 'flex';
+}
+
+// Função para esconder a tela de carregamento
+function hideLoading() {
+    document.getElementById('loading').style.display = 'none';
 }
