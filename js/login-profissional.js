@@ -42,6 +42,9 @@ function armazenarDados() {
 // Função de login
 async function logarProfissional() {
     console.log('Avaliando dados.')
+
+    // Exibir a tela de carregamento
+    showLoading();
     
     const email = document.querySelector('#email').value; // Pega o valor do input
     const senha = document.querySelector('#senha').value; // Pega o valor do input
@@ -62,10 +65,21 @@ async function logarProfissional() {
     if (response.ok) {
         // Armazenar os dados se "Me lembre" estiver ativado
         armazenarDados();
+        hideLoading();
         window.location.href = "../paginas/pagina-inicial-profissional.html";  // Redireciona para a página específica
     } else {
         alert(data.message);  // Exibe a mensagem de erro
     }
+}
+
+// Função para mostrar a tela de carregamento
+function showLoading() {
+    document.getElementById('loading').style.display = 'flex';
+}
+
+// Função para esconder a tela de carregamento
+function hideLoading() {
+    document.getElementById('loading').style.display = 'none';
 }
 
 // Chama a função para preencher os campos automaticamente quando a página carregar
